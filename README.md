@@ -1,72 +1,86 @@
-Here’s the markdown structure for your README file:
+# EduAI: Smart Academic Assistant
 
-```markdown
-# EduAI - Your AI Study Buddy
-
-EduAI is an intelligent assistant that helps students organize their academic life by providing personalized study plans, tracking assignments, and answering questions about courses based on Canvas LMS data.
-
-## Project Overview
-
-This application consists of two components:
-
-- **Backend**: Flask API that processes Canvas data, uses vector search, and integrates with Google's Gemini AI
-- **Frontend**: User interface for interacting with the AI assistant
+EduAI is an intelligent academic assistant that helps students manage their coursework, schedule, and study plans. The application integrates with Canvas LMS data to provide personalized assistance for academic planning and organization.
 
 ## Features
-- 🤖 **AI-powered study assistant** using Google's Gemini model
-- 📝 **Assignment and quiz tracking** from Canvas data
-- 📅 **Personalized study planning**
-- 🔍 **Semantic search** across all your course materials
-- ⏰ **Time-aware responses** with timezone support
 
-## Setup and Installation
+- **AI-Powered Assistance**: Get answers about your courses, assignments, and quizzes
+- **Interactive Calendar**: Schedule and manage your academic events
+- **Smart Planning**: Generate study plans based on your upcoming deadlines
+- **Beautiful UI**: Modern, responsive interface with animations and interactive elements
+- **Canvas Integration**: Connects with your Canvas LMS data for personalized assistance
+
+## Project Structure
+
+```
+EduAI/
+├── backend/
+│   ├── main.py                 # Flask API server
+│   ├── my_canvas_data.json     # Canvas data for the AI assistant
+│   └── Scraper.py              # Tool to fetch Canvas data (run separately)
+├── frontend/
+│   └── eduai/
+│       ├── src/
+│       │   ├── App.jsx         # Main application component
+│       │   ├── Api/
+│       │   │   └── ChatbotApi.jsx  # Chatbot interface component
+│       │   ├── components/
+│       │   │   ├── Experience.jsx
+│       │   │   ├── Animations/
+│       │   │   └── Layout/
+│       │   │       ├── Cards/
+│       │   │       └── Navbar/
+│       │   ├── index.css
+│       │   └── main.jsx
+│       ├── package.json
+│       └── ...
+└── README.md
+```
+
+## Setup Instructions
 
 ### Prerequisites
-- Python 3.8+ for the backend
-- Node.js and npm for the frontend
-- Google Gemini API key
+
+- Node.js (v14+)
+- Python (v3.7+)
+- pip (Python package manager)
 
 ### Backend Setup
 
-1. Clone the repository:
+1. Navigate to the backend directory:
    ```bash
-   git clone <repository-url>
+   cd backend
    ```
 
-2. Create a virtual environment and install dependencies:
+2. Create and activate a virtual environment (recommended):
    ```bash
-   python3 -m venv venv
-   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-   pip install -r requirements.txt
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
    ```
 
-3. Create/verify `.env` file in the backend directory with your Gemini API key:
-   ```
-   GEMINI_API_KEY=your-gemini-api-key-here
-   ```
-
-4. Install `python-dotenv` if not included in `requirements.txt`:
+3. Install required Python packages:
    ```bash
-   pip install python-dotenv
+   pip install flask flask-cors faiss-cpu numpy sentence-transformers google-generativeai python-dateutil pytz
    ```
 
-5. Ensure your Canvas data file (`my_canvas_data.json`) is placed in the backend directory.
+4. Set up your API key for Google Generative AI:
+   ```bash
+   export GEMINI_API_KEY="your-api-key-here"  # On Windows: set GEMINI_API_KEY=your-api-key-here
+   ```
 
-6. Start the backend server:
+5. Start the Flask server:
    ```bash
    python main.py
    ```
 
-   The backend will run on [http://localhost:5000](http://localhost:5000).
-
 ### Frontend Setup
 
-1. Navigate to the `eduai/frontend` directory:
+1. Navigate to the frontend/eduai directory:
    ```bash
-   cd eduai/frontend
+   cd frontend/eduai
    ```
 
-2. Install dependencies:
+2. Install Node.js dependencies:
    ```bash
    npm install
    ```
@@ -76,54 +90,45 @@ This application consists of two components:
    npm run dev
    ```
 
-   The frontend will run on [http://localhost:3000](http://localhost:3000).
+4. Open your browser and go to:
+   ```
+   http://localhost:5173
+   ```
 
-## How It Works
+## Canvas Data
 
-### Data Processing:
-The backend loads Canvas data from a JSON file (`my_canvas_data.json`), extracting information about courses, assignments, and quizzes.
+### Using Existing Data
+The application comes with sample Canvas data in `backend/my_canvas_data.json`. This is used by default for development.
 
-### Vector Search:
-Using FAISS and sentence transformers, the application builds a vector index for efficient semantic search.
+### Using Your Own Canvas Data (Optional)
+1. Navigate to the backend directory:
+   ```bash
+   cd backend
+   ```
 
-### AI Integration:
-The Google Gemini model is used to generate intelligent responses based on retrieved context.
+2. Update the `Scraper.py` file with your Canvas API key:
+   ```python
+   API_KEY = "your-canvas-api-key"
+   ```
 
-## API Endpoints:
-- **`/api/chat`**: Main endpoint for interacting with the AI
-- **`/api/reset-chat`**: Resets conversation history
-- **`/api/data/summary`**: Provides a summary of Canvas data
-- **`/api/health`**: Status check endpoint
+3. Run the scraper to fetch your Canvas data:
+   ```bash
+   python Scraper.py
+   ```
 
-## Project Structure
+4. This will create/update `my_canvas_data.json` with your personal Canvas information.
 
-```
-eduai/
-├── backend/
-│   ├── main.py  # Flask server file
-│   ├── my_canvas_data.json  # Canvas data file
-│   └── .env  # Environment variables (Gemini API key)
-├── frontend/
-│   └── ...  # Frontend files (React, etc.)
-└── requirements.txt  # Python dependencies
-```
+## Usage
 
-## Notes
-This project assumes your Canvas data is already structured in the required JSON format. The AI's effectiveness depends on the quality and completeness of the Canvas data provided.
-```
+1. Type your question in the chat input at the bottom of the screen.
+2. For calendar-related functions:
+   - Type "schedule [event]" to add events to your calendar
+   - Type "calendar" to view your calendar
+3. For academic questions, simply ask about your courses, assignments, due dates, etc.
 
-In the `requirements.txt` file for the backend, you should include the following packages based on the imports in `main.py`:
+## Development Notes
 
-```
-Flask==2.1.1
-flask-cors==3.1.1
-faiss-cpu==1.7.2
-sentence-transformers==2.2.0
-google-generativeai==0.1.0
-python-dotenv==0.19.2
-pytz==2022.1
-dateutil==2.8.2
-numpy==1.21.0
-```
+- The frontend is built with React, Tailwind CSS, and Framer Motion
+- The backend uses Flask, FAISS for vector search, and Google's Generative AI
+- Session management is implemented to maintain conversation context
 
-This setup will ensure that the backend and frontend are ready to run as expected.
