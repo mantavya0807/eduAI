@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Input, Modal, Spin, message as AntMessage } from "antd";
 import { motion, AnimatePresence } from "framer-motion";
 import manthinkingvatar from "/manthinkingvatar.svg";
@@ -6,6 +6,7 @@ import { LoadingOutlined } from "@ant-design/icons";
 import Topleftcard from "../components/Layout/Cards/leftcards/Topleftcard";
 
 const Chatbot = () => {
+  // State variables
   const [message, setMessage] = useState("");
   const [isUserModalOpen, setIsUserModalOpen] = useState(false);
   const [isBotModalOpen, setIsBotModalOpen] = useState(false);
@@ -14,16 +15,24 @@ const Chatbot = () => {
   const [specialAnimation, setSpecialAnimation] = useState(false);
   const [waitingForDate, setWaitingForDate] = useState(false);
   const [calendarEvent, setCalendarEvent] = useState("");
-  const [calendar, setCalendar] = useState({}); // Stores scheduled events
-  const [suggestedDates, setSuggestedDates] = useState([]); // Store suggested dates
-  const [waitingForTime, setWaitingForTime] = useState(false); // Wait for time input
-  const [selectedDate, setSelectedDate] = useState(""); // Stores selected date
+  const [calendar, setCalendar] = useState({});
+  const [suggestedDates, setSuggestedDates] = useState([]);
+  const [waitingForTime, setWaitingForTime] = useState(false);
+  const [selectedDate, setSelectedDate] = useState("");
   const [selectedTime, setSelectedTime] = useState("");
+  const [sessionId, setSessionId] = useState("default-session");
+  
+  // Initialize session ID on component mount
+  useEffect(() => {
+    // Generate a unique session ID
+    const newSessionId = `session-${Date.now()}-${Math.random().toString(36).substring(2, 9)}`;
+    setSessionId(newSessionId);
+  }, []);
 
   const handleSendMessage = async () => {
     if (!message.trim()) return;
 
-    // If waiting for date input, process it as a date instead
+    // If waiting for date input, process it as a date
     if (waitingForDate) {
       handleDateInput(message);
       return;
@@ -34,25 +43,55 @@ const Chatbot = () => {
     setIsBotModalOpen(true);
     setLoading(true);
 
+    // Handle calendar-related queries locally
     if (message.toLowerCase().includes("schedule")) {
-      // Suggest some dates
-      const dates = getSuggestedDates();
-      setSuggestedDates(dates);
-      setBotResponse(
-        `Sure! Here are some dates you can choose from: ${dates.join(", ")}`
-      );
-      setWaitingForDate(true);
-      setCalendarEvent(message); // Store the event details
-      setLoading(false);
+      handleScheduleRequest();
       return;
     }
 
     if (message.toLowerCase().includes("calendar")) {
-      setSpecialAnimation(true);
-      setLoading(false);
+      handleCalendarViewRequest();
       return;
     }
 
+    // Send other queries to the backend
+    try {
+      const response = await sendToBackend(message);
+      setBotResponse(response);
+    } catch (error) {
+      console.error("Error sending request to backend:", error);
+      setBotResponse("Sorry, I encountered an error while processing your request. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const sendToBackend = async (userMessage) => {
+    try {
+      const response = await fetch("http://localhost:5000/api/chat", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          message: userMessage,
+          session_id: sessionId
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Server responded with ${response.status}`);
+      }
+
+      const data = await response.json();
+      return data.response || "No response from the server.";
+    } catch (error) {
+      // If backend fails, fallback to Gemini API
+      return await fallbackToGemini(userMessage);
+    }
+  };
+
+  const fallbackToGemini = async (userMessage) => {
     try {
       const API_KEY = "AIzaSyCtWBHsghRR094V6znk4mrNt83iojyUN0I";
       if (!API_KEY) throw new Error("Missing API key");
@@ -65,22 +104,34 @@ const Chatbot = () => {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            contents: [{ parts: [{ text: message }] }],
+            contents: [{ parts: [{ text: userMessage }] }],
           }),
         }
       );
 
       const data = await response.json();
-      const botMessage =
-        data?.candidates?.[0]?.content?.parts?.[0]?.text ||
-        "No response from AI.";
-      setBotResponse(botMessage);
+      return data?.candidates?.[0]?.content?.parts?.[0]?.text || "No response from AI.";
     } catch (error) {
-      setBotResponse("Something went wrong, please try again.");
-      console.log("Error:", error);
-    } finally {
-      setLoading(false);
+      console.error("Gemini fallback error:", error);
+      return "I'm unable to process your request right now. Please try again later.";
     }
+  };
+
+  const handleScheduleRequest = () => {
+    // Suggest some dates
+    const dates = getSuggestedDates();
+    setSuggestedDates(dates);
+    setBotResponse(
+      `Sure! Here are some dates you can choose from: ${dates.join(", ")}`
+    );
+    setWaitingForDate(true);
+    setCalendarEvent(message); // Store the event details
+    setLoading(false);
+  };
+
+  const handleCalendarViewRequest = () => {
+    setSpecialAnimation(true);
+    setLoading(false);
   };
 
   const handleDateInput = (date) => {
@@ -95,7 +146,7 @@ const Chatbot = () => {
     setCalendar((prev) => ({ ...prev, [date]: calendarEvent }));
     setBotResponse(`📅 Event added on ${date}: "${calendarEvent}"`);
     AntMessage.success(`Event scheduled for ${date}`);
-    storeEventInLocalStorage(calendarEvent);
+    storeEventInLocalStorage(calendarEvent, date);
     setMessage("");
     setCalendarEvent("");
   };
@@ -111,13 +162,45 @@ const Chatbot = () => {
     });
   };
 
-  const storeEventInLocalStorage = (event) => {
+  const storeEventInLocalStorage = (event, date) => {
     const keyword = event.split(" ")[0];
     const currentTime = new Date().toISOString();
-    localStorage.setItem(
-      "scheduledEvent",
-      JSON.stringify({ keyword, time: currentTime })
-    );
+    
+    // Store more comprehensive event data
+    const eventData = {
+      keyword,
+      fullEvent: event,
+      date,
+      time: currentTime,
+    };
+    
+    // Get existing events or initialize empty array
+    const existingEvents = JSON.parse(localStorage.getItem("scheduledEvents") || "[]");
+    existingEvents.push(eventData);
+    
+    // Save back to localStorage
+    localStorage.setItem("scheduledEvents", JSON.stringify(existingEvents));
+    
+    // Also maintain backward compatibility
+    localStorage.setItem("scheduledEvent", JSON.stringify({ keyword, time: currentTime }));
+  };
+
+  // Function to reset conversation with backend
+  const resetConversation = async () => {
+    try {
+      await fetch("http://localhost:5000/api/reset-chat", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          session_id: sessionId
+        }),
+      });
+      console.log("Conversation reset successfully");
+    } catch (error) {
+      console.error("Error resetting conversation:", error);
+    }
   };
 
   return (
