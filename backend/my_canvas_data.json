@@ -1,526 +1,1300 @@
 {
-    "user": {
-      "id": 10500000007275231,
-      "name": "Keshav Khandelwal",
-      "sortable_name": "Khandelwal, Keshav",
-      "login_id": null
+  "user": {
+    "id": 10500000007275231,
+    "name": "Jack Smith",
+    "sortable_name": "Smith, Jack",
+    "login_id": "jas3487@psu.edu",
+    "preferences": {
+      "daily_study_hours": 4,
+      "preferred_study_time": "evening",
+      "difficulty_adjustment": 1.1,
+      "focus_adjustment": 0.9
     },
-    "courses": [
+    "statistics": {
+      "average_session_length": 95,
+      "total_study_hours": 124,
+      "current_streak": 5,
+      "efficiency_score": 87
+    }
+  },
+  "courses": [
+    {
+      "name": "CMPSC 221",
+      "course_code": "CMPSC221-SP25",
+      "description": "Object Oriented Programming with Web-Based Applications - Introduction to object-oriented design and programming, with a focus on web application development.",
+      "instructor": "Dr. Michael Rodriguez",
+      "progress": {
+        "grade": "B+",
+        "completion": 50,
+        "tasks_completed": 3,
+        "tasks_total": 7
+      },
+      "assignments": [
+        {
+          "name": "Test 1 - Chapters 1-10",
+          "due_at": "2025-02-24T04:59:00Z",
+          "description": "Exam covering foundational programming concepts and basic OOP through chapters 1-10.",
+          "submission": {
+            "scores": "80/100",
+            "submitted_at": "2025-02-24T04:45:00Z",
+            "actual_time_spent": 2
+          },
+          "priority": "high",
+          "estimated_time": 5,
+          "difficulty": 8,
+          "focus_required": 9
+        },
+        {
+          "name": "Programming Assignment 3 Customer Loan Accounts",
+          "due_at": "2025-02-14T04:59:00Z",
+          "description": "Implement a program that manages customer loan accounts using classes, constructors, and data validation.",
+          "submission": {
+            "scores": "18/20",
+            "submitted_at": "2025-02-13T22:30:00Z",
+            "actual_time_spent": 6
+          },
+          "priority": "high",
+          "estimated_time": 5,
+          "difficulty": 7,
+          "focus_required": 8
+        },
+        {
+          "name": "Programming Assignment 4 Pizza Servings Calculator",
+          "due_at": "2025-02-28T04:59:00Z",
+          "description": "Write a program that calculates pizza servings, practicing modular arithmetic and function usage.",
+          "submission": {
+            "scores": "15/15",
+            "submitted_at": "2025-02-27T20:15:00Z",
+            "actual_time_spent": 3.5
+          },
+          "priority": "medium",
+          "estimated_time": 4,
+          "difficulty": 6,
+          "focus_required": 7
+        },
+        {
+          "name": "Programming Assignment 5 2D Drawing Application",
+          "due_at": "2025-04-15T03:59:59Z",
+          "description": "Create a GUI-based drawing tool, emphasizing event handling and class design for shapes.",
+          "submission": {
+            "scores": null
+          },
+          "priority": "high",
+          "estimated_time": 8,
+          "difficulty": 9,
+          "focus_required": 10
+        },
+        {
+          "name": "Programming Assignment 6 - Functional Programming",
+          "due_at": "2025-04-23T03:59:59Z",
+          "description": "Learn and apply functional programming concepts, including higher-order functions and lambdas.",
+          "submission": {
+            "scores": null
+          },
+          "priority": "high",
+          "estimated_time": 6,
+          "difficulty": 8,
+          "focus_required": 9
+        },
+        {
+          "name": "Test 2 - Chapters 12, 13, 16",
+          "due_at": "2025-04-18T03:59:00Z",
+          "description": "Assessment of deeper OOP concepts, exception handling, and file I/O from chapters 12, 13, 16.",
+          "submission": {
+            "scores": null
+          },
+          "priority": "high",
+          "estimated_time": 5,
+          "difficulty": 9,
+          "focus_required": 10
+        },
+        {
+          "name": "Final Exam - Comprehensive",
+          "due_at": "2025-05-02T15:00:00Z",
+          "description": "Final exam covering all course content with emphasis on practical application of OOP concepts.",
+          "submission": {
+            "scores": null
+          },
+          "priority": "high",
+          "estimated_time": 10,
+          "difficulty": 10,
+          "focus_required": 10
+        }
+      ],
+      "quizzes": [
+        {
+          "title": "Test 1 - Chapters 1-10",
+          "due_at": "2025-02-24T04:59:00Z",
+          "description": "In-class or online quiz version of the Test 1 material on core Java concepts.",
+          "submission": {
+            "scores": "80/100",
+            "submitted_at": "2025-02-24T04:45:00Z",
+            "actual_time_spent": 2
+          },
+          "priority": "high",
+          "estimated_time": 2,
+          "difficulty": 8,
+          "focus_required": 9
+        },
+        {
+          "title": "Test 2 - Chapters 12, 13, 16",
+          "due_at": "2025-04-18T03:59:00Z",
+          "description": "Quiz checking proficiency with advanced OOP, exceptions, and file I/O features.",
+          "submission": {
+            "scores": null
+          },
+          "priority": "high",
+          "estimated_time": 2,
+          "difficulty": 9,
+          "focus_required": 9
+        },
+        {
+          "title": "Weekly Check-in Quiz 8",
+          "due_at": "2025-04-10T03:59:00Z",
+          "description": "Quick quiz on functional programming basics",
+          "submission": {
+            "scores": null
+          },
+          "priority": "medium",
+          "estimated_time": 1,
+          "difficulty": 6,
+          "focus_required": 7
+        }
+      ],
+      "study_groups": [
+        {
+          "id": 2,
+          "name": "Java Programming Study Circle",
+          "description": "Weekly sessions for practicing Java programming concepts and working on assignments together.",
+          "meeting_times": [
+            {
+              "day": "Monday",
+              "start_time": "18:00",
+              "end_time": "20:00",
+              "location": "Learning Commons Room 203"
+            }
+          ],
+          "members": [
+            {
+              "name": "Maya Johnson",
+              "avatar": "https://api.dicebear.com/7.x/miniavs/svg?seed=2",
+              "user_id": 105000000072454
+            },
+            {
+              "name": "Carlos Rodriguez",
+              "avatar": "https://api.dicebear.com/7.x/miniavs/svg?seed=5",
+              "user_id": 105000000072457
+            },
+            {
+              "name": "Emma Wilson",
+              "avatar": "https://api.dicebear.com/7.x/miniavs/svg?seed=6",
+              "user_id": 105000000072458
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "CMPSC 360",
+      "course_code": "CMPSC360-SP25",
+      "description": "Discrete Mathematics for Computer Science - Introduces discrete mathematics for computer science, covering mathematical reasoning, combinatorial analysis, discrete structures, algorithmic thinking, and applications.",
+      "instructor": "Dr. Lisa Chen",
+      "progress": {
+        "grade": "A",
+        "completion": 50,
+        "tasks_completed": 3,
+        "tasks_total": 6
+      },
+      "assignments": [
+        {
+          "name": "HW7",
+          "description": "Practice problems on counting techniques and advanced set theory.",
+          "due_at": "2025-03-20T04:59:00Z",
+          "submission": {
+            "scores": "15/15",
+            "submitted_at": "2025-03-19T22:15:00Z",
+            "actual_time_spent": 3.5
+          },
+          "priority": "medium",
+          "estimated_time": 3,
+          "difficulty": 7,
+          "focus_required": 8
+        },
+        {
+          "name": "HW8",
+          "due_at": "2025-04-12T03:59:59Z",
+          "description": "Exercises on combinatorics and proof strategies involving mathematical induction.",
+          "submission": {
+            "scores": null
+          },
+          "priority": "medium",
+          "estimated_time": 3.5,
+          "difficulty": 8,
+          "focus_required": 9
+        },
+        {
+          "name": "HW9",
+          "due_at": "2025-04-19T03:59:59Z",
+          "description": "Advanced problems on graph theory and algorithms.",
+          "submission": {
+            "scores": null
+          },
+          "priority": "high",
+          "estimated_time": 4,
+          "difficulty": 9,
+          "focus_required": 9
+        },
+        {
+          "name": "Quiz 1: Logic and sets. Graded.",
+          "due_at": "2025-02-17T04:59:00Z",
+          "description": "Covers logical equivalences, set operations, and basic proofs.",
+          "submission": {
+            "scores": "8/10",
+            "submitted_at": "2025-02-17T04:30:00Z",
+            "actual_time_spent": 1.5
+          },
+          "priority": "high",
+          "estimated_time": 2,
+          "difficulty": 7,
+          "focus_required": 9
+        },
+        {
+          "name": "Midterm exam 1",
+          "due_at": "2025-02-28T13:00:00Z",
+          "description": "Exam on logic, sets, functions, and the first half of discrete math fundamentals.",
+          "submission": {
+            "scores": "45/50",
+            "submitted_at": "2025-02-28T12:55:00Z",
+            "actual_time_spent": 2
+          },
+          "priority": "high",
+          "estimated_time": 5,
+          "difficulty": 9,
+          "focus_required": 10
+        },
+        {
+          "name": "Midterm exam 2",
+          "due_at": "2025-04-16T13:00:00Z",
+          "description": "Second midterm covering number theory, combinatorics, and more advanced discrete math topics.",
+          "submission": {
+            "scores": null
+          },
+          "priority": "high",
+          "estimated_time": 5,
+          "difficulty": 9,
+          "focus_required": 10
+        },
+        {
+          "name": "Final Exam",
+          "due_at": "2025-05-05T10:00:00Z",
+          "description": "Comprehensive final exam covering all course materials with emphasis on proof techniques.",
+          "submission": {
+            "scores": null
+          },
+          "priority": "high",
+          "estimated_time": 8,
+          "difficulty": 10,
+          "focus_required": 10
+        }
+      ],
+      "quizzes": [
+        {
+          "title": "Quiz 1: Logic and sets. Training.",
+          "due_at": "2025-02-10T04:59:00Z",
+          "description": "Practice quiz reviewing logic simplifications and basic set operations.",
+          "submission": {
+            "scores": "9/10",
+            "submitted_at": "2025-02-09T20:45:00Z",
+            "actual_time_spent": 1
+          },
+          "priority": "medium",
+          "estimated_time": 1,
+          "difficulty": 6,
+          "focus_required": 8
+        },
+        {
+          "title": "Quiz 3: Logic and sets. Graded.",
+          "due_at": "2025-04-10T04:59:00Z",
+          "description": "Comprehensive graded quiz on advanced logical equivalences and set theory proofs.",
+          "submission": {
+            "scores": null
+          },
+          "priority": "high",
+          "estimated_time": 1.5,
+          "difficulty": 8,
+          "focus_required": 9
+        }
+      ],
+      "study_groups": [
+        {
+          "id": 3,
+          "name": "Discrete Math Problem Solvers",
+          "description": "Group focused on working through complex proof exercises and preparing for exams.",
+          "meeting_times": [
+            {
+              "day": "Friday",
+              "start_time": "16:00",
+              "end_time": "18:00",
+              "location": "Mathematics Building Room 105"
+            }
+          ],
+          "members": [
+            {
+              "name": "Raj Patel",
+              "avatar": "https://api.dicebear.com/7.x/miniavs/svg?seed=3",
+              "user_id": 105000000072455
+            },
+            {
+              "name": "Emma Wilson",
+              "avatar": "https://api.dicebear.com/7.x/miniavs/svg?seed=6",
+              "user_id": 105000000072458
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "MATH 141",
+      "course_code": "MATH141-SP25",
+      "description": "Calculus II - Integration techniques, infinite series, parametric equations, polar coordinates, and applications of integration.",
+      "instructor": "Dr. Sarah Miller",
+      "progress": {
+        "grade": "B",
+        "completion": 45,
+        "tasks_completed": 5,
+        "tasks_total": 11
+      },
+      "assignments": [
+        {
+          "name": "Homework 9: Integration by Parts",
+          "due_at": "2025-03-08T04:59:00Z",
+          "description": "Practice problems on integration by parts technique.",
+          "submission": {
+            "scores": "18/20",
+            "submitted_at": "2025-03-07T22:30:00Z",
+            "actual_time_spent": 3
+          },
+          "priority": "medium",
+          "estimated_time": 3,
+          "difficulty": 7,
+          "focus_required": 8
+        },
+        {
+          "name": "Homework 10: Integration Tables",
+          "due_at": "2025-03-15T03:59:00Z",
+          "description": "Problems using integration tables and substitution methods.",
+          "submission": {
+            "scores": "16/20",
+            "submitted_at": "2025-03-14T23:45:00Z",
+            "actual_time_spent": 3.5
+          },
+          "priority": "medium",
+          "estimated_time": 3,
+          "difficulty": 7,
+          "focus_required": 8
+        },
+        {
+          "name": "Homework 11: Improper Integrals",
+          "due_at": "2025-03-29T03:59:00Z",
+          "description": "Problems involving integrals with infinite limits or discontinuous integrands.",
+          "submission": {
+            "scores": "17/20",
+            "submitted_at": "2025-03-28T21:15:00Z",
+            "actual_time_spent": 4
+          },
+          "priority": "medium",
+          "estimated_time": 3.5,
+          "difficulty": 8,
+          "focus_required": 9
+        },
+        {
+          "name": "Homework 12: Sequences and Series",
+          "due_at": "2025-04-10T03:59:00Z",
+          "description": "Problems on convergence tests and series expansions.",
+          "submission": {
+            "scores": null
+          },
+          "priority": "high",
+          "estimated_time": 4,
+          "difficulty": 8,
+          "focus_required": 9
+        },
+        {
+          "name": "Homework 13: Power Series",
+          "due_at": "2025-04-17T03:59:00Z",
+          "description": "Practice with power series, radius of convergence, and Taylor series.",
+          "submission": {
+            "scores": null
+          },
+          "priority": "medium",
+          "estimated_time": 4,
+          "difficulty": 9,
+          "focus_required": 9
+        },
+        {
+          "name": "Homework 14: Parametric Equations",
+          "due_at": "2025-04-24T03:59:00Z",
+          "description": "Problems involving parametric equations and polar coordinates.",
+          "submission": {
+            "scores": null
+          },
+          "priority": "medium",
+          "estimated_time": 3.5,
+          "difficulty": 8,
+          "focus_required": 8
+        },
+        {
+          "name": "Test 2",
+          "due_at": "2025-03-20T13:30:00Z",
+          "description": "Second major test covering integration techniques and applications.",
+          "submission": {
+            "scores": "78/100",
+            "submitted_at": "2025-03-20T15:00:00Z",
+            "actual_time_spent": 1.5
+          },
+          "priority": "high",
+          "estimated_time": 6,
+          "difficulty": 9,
+          "focus_required": 10
+        },
+        {
+          "name": "Test 3",
+          "due_at": "2025-04-17T13:30:00Z",
+          "description": "Third major test covering sequences, series, and power series.",
+          "submission": {
+            "scores": null
+          },
+          "priority": "high",
+          "estimated_time": 6,
+          "difficulty": 9,
+          "focus_required": 10
+        },
+        {
+          "name": "Final Exam",
+          "due_at": "2025-05-01T13:00:00Z",
+          "description": "Comprehensive final exam covering all course material.",
+          "submission": {
+            "scores": null
+          },
+          "priority": "high",
+          "estimated_time": 10,
+          "difficulty": 10,
+          "focus_required": 10
+        }
+      ],
+      "quizzes": [
+        {
+          "title": "Quiz 7: Integration Techniques",
+          "due_at": "2025-03-05T03:59:00Z",
+          "description": "Short quiz on various integration techniques.",
+          "submission": {
+            "scores": "9/10",
+            "submitted_at": "2025-03-04T22:15:00Z",
+            "actual_time_spent": 1
+          },
+          "priority": "medium",
+          "estimated_time": 1,
+          "difficulty": 7,
+          "focus_required": 8
+        },
+        {
+          "title": "Quiz 8: Applications of Integration",
+          "due_at": "2025-03-19T03:59:00Z",
+          "description": "Short quiz on area, volume, and other integration applications.",
+          "submission": {
+            "scores": "8/10",
+            "submitted_at": "2025-03-18T23:30:00Z",
+            "actual_time_spent": 1
+          },
+          "priority": "medium",
+          "estimated_time": 1,
+          "difficulty": 7,
+          "focus_required": 8
+        },
+        {
+          "title": "Quiz 9: Sequences",
+          "due_at": "2025-04-09T03:59:00Z",
+          "description": "Quiz on sequence convergence and properties.",
+          "submission": {
+            "scores": null
+          },
+          "priority": "medium",
+          "estimated_time": 1,
+          "difficulty": 7,
+          "focus_required": 8
+        },
+        {
+          "title": "Quiz 10: Series",
+          "due_at": "2025-04-16T03:59:00Z",
+          "description": "Quiz on series convergence tests.",
+          "submission": {
+            "scores": null
+          },
+          "priority": "medium",
+          "estimated_time": 1,
+          "difficulty": 8,
+          "focus_required": 8
+        },
+        {
+          "title": "Quiz 11: Power Series",
+          "due_at": "2025-04-23T03:59:00Z",
+          "description": "Quiz on power series representations and applications.",
+          "submission": {
+            "scores": null
+          },
+          "priority": "medium",
+          "estimated_time": 1,
+          "difficulty": 8,
+          "focus_required": 9
+        }
+      ],
+      "study_groups": [
+        {
+          "id": 4,
+          "name": "Calculus II Study Group",
+          "description": "Group focused on solving challenging calculus problems and exam preparation.",
+          "meeting_times": [
+            {
+              "day": "Tuesday",
+              "start_time": "17:00",
+              "end_time": "19:00",
+              "location": "Willard Building Room 170"
+            }
+          ],
+          "members": [
+            {
+              "name": "Maya Johnson",
+              "avatar": "https://api.dicebear.com/7.x/miniavs/svg?seed=2",
+              "user_id": 105000000072454
+            },
+            {
+              "name": "Carlos Rodriguez",
+              "avatar": "https://api.dicebear.com/7.x/miniavs/svg?seed=5",
+              "user_id": 105000000072457
+            },
+            {
+              "name": "Alex Chen",
+              "avatar": "https://api.dicebear.com/7.x/miniavs/svg?seed=1",
+              "user_id": 105000000072453
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "PHYS 212",
+      "course_code": "PHYS212-SP25",
+      "description": "General Physics: Electricity and Magnetism - Electric charge, fields, circuits, magnetic fields, electromagnetic induction, electromagnetic waves, and applications of electromagnetism.",
+      "instructor": "Dr. Robert Chang",
+      "progress": {
+        "grade": "C+",
+        "completion": 40,
+        "tasks_completed": 4,
+        "tasks_total": 10
+      },
+      "assignments": [
+        {
+          "name": "Homework 7: Electric Fields",
+          "due_at": "2025-03-05T04:59:00Z",
+          "description": "Problems involving electric fields and forces.",
+          "submission": {
+            "scores": "16/20",
+            "submitted_at": "2025-03-04T23:50:00Z",
+            "actual_time_spent": 3
+          },
+          "priority": "medium",
+          "estimated_time": 3,
+          "difficulty": 8,
+          "focus_required": 9
+        },
+        {
+          "name": "Homework 8: Gauss's Law",
+          "due_at": "2025-03-19T03:59:00Z",
+          "description": "Problems applying Gauss's Law to various charge distributions.",
+          "submission": {
+            "scores": "14/20",
+            "submitted_at": "2025-03-18T22:30:00Z",
+            "actual_time_spent": 4
+          },
+          "priority": "medium",
+          "estimated_time": 3,
+          "difficulty": 9,
+          "focus_required": 9
+        },
+        {
+          "name": "Homework 9: Electric Potential",
+          "due_at": "2025-04-02T03:59:00Z",
+          "description": "Problems on electric potential and electric potential energy.",
+          "submission": {
+            "scores": "17/20",
+            "submitted_at": "2025-04-01T21:45:00Z",
+            "actual_time_spent": 3.5
+          },
+          "priority": "medium",
+          "estimated_time": 3,
+          "difficulty": 8,
+          "focus_required": 9
+        },
+        {
+          "name": "Homework 10: Capacitance",
+          "due_at": "2025-04-09T03:59:00Z",
+          "description": "Problems involving capacitors and dielectrics.",
+          "submission": {
+            "scores": "18/20",
+            "submitted_at": "2025-04-08T23:15:00Z",
+            "actual_time_spent": 3
+          },
+          "priority": "medium",
+          "estimated_time": 3,
+          "difficulty": 7,
+          "focus_required": 8
+        },
+        {
+          "name": "Lab Report 6: Electric Fields",
+          "due_at": "2025-04-18T03:59:00Z",
+          "description": "Write-up of the electric field mapping laboratory experiment.",
+          "submission": {
+            "scores": null
+          },
+          "priority": "medium",
+          "estimated_time": 3,
+          "difficulty": 7,
+          "focus_required": 8
+        },
+        {
+          "name": "Homework 11: Current and Resistance",
+          "due_at": "2025-04-16T03:59:00Z",
+          "description": "Problems on current, resistance, and simple circuits.",
+          "submission": {
+            "scores": null
+          },
+          "priority": "medium",
+          "estimated_time": 3,
+          "difficulty": 7,
+          "focus_required": 8
+        },
+        {
+          "name": "Homework 12: DC Circuits",
+          "due_at": "2025-04-23T03:59:00Z",
+          "description": "Problems on complex DC circuits and Kirchhoff's rules.",
+          "submission": {
+            "scores": null
+          },
+          "priority": "medium",
+          "estimated_time": 3.5,
+          "difficulty": 8,
+          "focus_required": 9
+        },
+        {
+          "name": "Lab Report 7: RC Circuits",
+          "due_at": "2025-04-25T03:59:00Z",
+          "description": "Write-up of the RC circuit laboratory experiment.",
+          "submission": {
+            "scores": null
+          },
+          "priority": "medium",
+          "estimated_time": 3,
+          "difficulty": 7,
+          "focus_required": 8
+        },
+        {
+          "name": "Exam 2",
+          "due_at": "2025-04-11T14:30:00Z",
+          "description": "Second exam covering electric potential, capacitance, and current.",
+          "submission": {
+            "scores": null
+          },
+          "priority": "high",
+          "estimated_time": 6,
+          "difficulty": 9,
+          "focus_required": 10
+        },
+        {
+          "name": "Final Exam",
+          "due_at": "2025-05-03T09:00:00Z",
+          "description": "Comprehensive final exam covering all electricity and magnetism topics.",
+          "submission": {
+            "scores": null
+          },
+          "priority": "high",
+          "estimated_time": 10,
+          "difficulty": 10,
+          "focus_required": 10
+        }
+      ],
+      "quizzes": [
+        {
+          "title": "Pre-lab Quiz 6: Electric Fields",
+          "due_at": "2025-04-03T12:00:00Z",
+          "description": "Quiz to prepare for the electric field mapping lab.",
+          "submission": {
+            "scores": "9/10",
+            "submitted_at": "2025-04-02T22:10:00Z",
+            "actual_time_spent": 0.5
+          },
+          "priority": "low",
+          "estimated_time": 1,
+          "difficulty": 5,
+          "focus_required": 7
+        },
+        {
+          "title": "Pre-lab Quiz 7: RC Circuits",
+          "due_at": "2025-04-17T12:00:00Z",
+          "description": "Quiz to prepare for the RC circuit lab.",
+          "submission": {
+            "scores": null
+          },
+          "priority": "low",
+          "estimated_time": 1,
+          "difficulty": 5,
+          "focus_required": 7
+        }
+      ],
+      "study_groups": [
+        {
+          "id": 5,
+          "name": "Physics 212 Problem Solvers",
+          "description": "Group for solving physics problems and preparing for exams.",
+          "meeting_times": [
+            {
+              "day": "Wednesday",
+              "start_time": "19:00",
+              "end_time": "21:00",
+              "location": "Davey Lab Room 101"
+            }
+          ],
+          "members": [
+            {
+              "name": "Sofia Garcia",
+              "avatar": "https://api.dicebear.com/7.x/miniavs/svg?seed=4",
+              "user_id": 105000000072456
+            },
+            {
+              "name": "Alex Chen",
+              "avatar": "https://api.dicebear.com/7.x/miniavs/svg?seed=1",
+              "user_id": 105000000072453
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ENGL 202C",
+      "course_code": "ENGL202C-SP25",
+      "description": "Technical Writing - Writing for students in scientific and technical disciplines. Focus on rhetorical analysis, collaboration, professional communication, ethical considerations, and document design.",
+      "instructor": "Dr. Emily Martinez",
+      "progress": {
+        "grade": "A-",
+        "completion": 35,
+        "tasks_completed": 2,
+        "tasks_total": 5
+      },
+      "assignments": [
+        {
+          "name": "Document Analysis Memo",
+          "due_at": "2025-02-15T04:59:00Z",
+          "description": "Analyze a technical document from your field and write a memo about its effectiveness.",
+          "submission": {
+            "scores": "90/100",
+            "submitted_at": "2025-02-14T23:45:00Z",
+            "actual_time_spent": 4
+          },
+          "priority": "medium",
+          "estimated_time": 3,
+          "difficulty": 6,
+          "focus_required": 7
+        },
+        {
+          "name": "Technical Description",
+          "due_at": "2025-03-15T03:59:00Z",
+          "description": "Write a detailed technical description of a process, mechanism, or concept from your field.",
+          "submission": {
+            "scores": "95/100",
+            "submitted_at": "2025-03-14T22:30:00Z",
+            "actual_time_spent": 5
+          },
+          "priority": "medium",
+          "estimated_time": 4,
+          "difficulty": 7,
+          "focus_required": 8
+        },
+        {
+          "name": "Research Paper Outline",
+          "due_at": "2025-04-20T03:59:00Z",
+          "description": "Prepare a detailed outline for your final research paper, including sources and methodology.",
+          "submission": {
+            "scores": null
+          },
+          "priority": "medium",
+          "estimated_time": 3,
+          "difficulty": 5,
+          "focus_required": 6
+        },
+        {
+          "name": "Research Paper Draft",
+          "due_at": "2025-04-27T03:59:00Z",
+          "description": "Submit a complete draft of your research paper for peer review.",
+          "submission": {
+            "scores": null
+          },
+          "priority": "high",
+          "estimated_time": 8,
+          "difficulty": 8,
+          "focus_required": 9
+        },
+        {
+          "name": "Final Research Paper",
+          "due_at": "2025-05-05T03:59:00Z",
+          "description": "Submit your revised final research paper incorporating feedback from peer review.",
+          "submission": {
+            "scores": null
+          },
+          "priority": "high",
+          "estimated_time": 6,
+          "difficulty": 8,
+          "focus_required": 9
+        }
+      ],
+      "quizzes": [
+        {
+          "title": "APA Citation Quiz",
+          "due_at": "2025-03-05T03:59:00Z",
+          "description": "Quiz on APA citation format and standards.",
+          "submission": {
+            "scores": "25/25",
+            "submitted_at": "2025-03-04T21:15:00Z",
+            "actual_time_spent": 0.75
+          },
+          "priority": "low",
+          "estimated_time": 1,
+          "difficulty": 4,
+          "focus_required": 6
+        },
+        {
+          "title": "Technical Writing Principles Quiz",
+          "due_at": "2025-04-10T03:59:00Z",
+          "description": "Quiz on key principles and best practices in technical writing.",
+          "submission": {
+            "scores": null
+          },
+          "priority": "low",
+          "estimated_time": 1,
+          "difficulty": 5,
+          "focus_required": 6
+        }
+      ]
+    },
+    {
+      "name": "SOC 119",
+      "course_code": "SOC119-SP25",
+      "description": "Race and Ethnic Relations - An introduction to the study of race and ethnic relations in America, including historical development, theoretical perspectives, and contemporary issues.",
+      "instructor": "Dr. James Wilson",
+      "progress": {
+        "grade": "A",
+        "completion": 50,
+        "tasks_completed": 4,
+        "tasks_total": 8
+      },
+      "assignments": [
+        {
+          "name": "Reflection Paper 1",
+          "due_at": "2025-02-10T04:59:00Z",
+          "description": "Reflect on your own racial and ethnic identity and experiences.",
+          "submission": {
+            "scores": "48/50",
+            "submitted_at": "2025-02-09T23:15:00Z",
+            "actual_time_spent": 3
+          },
+          "priority": "medium",
+          "estimated_time": 3,
+          "difficulty": 5,
+          "focus_required": 7
+        },
+        {
+          "name": "Media Analysis",
+          "due_at": "2025-03-10T03:59:00Z",
+          "description": "Analyze media representations of race and ethnicity in a chosen film or TV show.",
+          "submission": {
+            "scores": "46/50",
+            "submitted_at": "2025-03-09T22:30:00Z",
+            "actual_time_spent": 4
+          },
+          "priority": "medium",
+          "estimated_time": 4,
+          "difficulty": 6,
+          "focus_required": 7
+        },
+        {
+          "name": "Midterm Exam",
+          "due_at": "2025-03-15T13:00:00Z",
+          "description": "Exam covering theoretical perspectives and historical developments in race relations.",
+          "submission": {
+            "scores": "92/100",
+            "submitted_at": "2025-03-15T14:30:00Z",
+            "actual_time_spent": 1.5
+          },
+          "priority": "high",
+          "estimated_time": 5,
+          "difficulty": 7,
+          "focus_required": 9
+        },
+        {
+          "name": "Reflection Paper 2",
+          "due_at": "2025-04-05T03:59:00Z",
+          "description": "Reflect on a contemporary racial or ethnic issue in the news.",
+          "submission": {
+            "scores": "49/50",
+            "submitted_at": "2025-04-04T21:45:00Z",
+            "actual_time_spent": 3
+          },
+          "priority": "medium",
+          "estimated_time": 3,
+          "difficulty": 5,
+          "focus_required": 7
+        },
+        {
+          "name": "Discussion Post Week 12",
+          "due_at": "2025-04-09T03:59:00Z",
+          "description": "Post your thoughts on this week's readings about institutional racism.",
+          "submission": {
+            "scores": null
+          },
+          "priority": "low",
+          "estimated_time": 1,
+          "difficulty": 3,
+          "focus_required": 5
+        },
+        {
+          "name": "Discussion Post Week 13",
+          "due_at": "2025-04-16T03:59:00Z",
+          "description": "Post your thoughts on this week's readings about intersectionality.",
+          "submission": {
+            "scores": null
+          },
+          "priority": "low",
+          "estimated_time": 1,
+          "difficulty": 3,
+          "focus_required": 5
+        },
+        {
+          "name": "Group Presentation",
+          "due_at": "2025-04-25T12:00:00Z",
+          "description": "Present with your group on a specific ethnic or racial community in the United States.",
+          "submission": {
+            "scores": null
+          },
+          "priority": "high",
+          "estimated_time": 6,
+          "difficulty": 7,
+          "focus_required": 8
+        },
+        {
+          "name": "Final Exam",
+          "due_at": "2025-05-04T13:00:00Z",
+          "description": "Comprehensive exam covering all course material with emphasis on contemporary issues.",
+          "submission": {
+            "scores": null
+          },
+          "priority": "high",
+          "estimated_time": 6,
+          "difficulty": 8,
+          "focus_required": 9
+        }
+      ],
+      "quizzes": [
+        {
+          "title": "Reading Quiz Week 5",
+          "due_at": "2025-02-05T03:59:00Z",
+          "description": "Quiz on readings about historical perspectives on race.",
+          "submission": {
+            "scores": "9/10",
+            "submitted_at": "2025-02-04T22:15:00Z",
+            "actual_time_spent": 0.5
+          },
+          "priority": "low",
+          "estimated_time": 0.5,
+          "difficulty": 4,
+          "focus_required": 6
+        },
+        {
+          "title": "Reading Quiz Week 8",
+          "due_at": "2025-02-26T03:59:00Z",
+          "description": "Quiz on readings about immigration and ethnic identity.",
+          "submission": {
+            "scores": "10/10",
+            "submitted_at": "2025-02-25T21:30:00Z",
+            "actual_time_spent": 0.5
+          },
+          "priority": "low",
+          "estimated_time": 0.5,
+          "difficulty": 4,
+          "focus_required": 6
+        },
+        {
+          "title": "Reading Quiz Week 11",
+          "due_at": "2025-04-02T03:59:00Z",
+          "description": "Quiz on readings about racial inequality in education.",
+          "submission": {
+            "scores": "9/10",
+            "submitted_at": "2025-04-01T20:45:00Z",
+            "actual_time_spent": 0.5
+          },
+          "priority": "low",
+          "estimated_time": 0.5,
+          "difficulty": 4,
+          "focus_required": 6
+        },
+        {
+          "title": "Reading Quiz Week 14",
+          "due_at": "2025-04-23T03:59:00Z",
+          "description": "Quiz on readings about racial justice movements.",
+          "submission": {
+            "scores": null
+          },
+          "priority": "low",
+          "estimated_time": 0.5,
+          "difficulty": 4,
+          "focus_required": 6
+        }
+      ]
+    }
+  ],
+  "peers": [
+    {
+      "id": 105000000072453,
+      "name": "Alex Chen",
+      "courses": ["CMPSC 221", "PHYS 212", "MATH 141"],
+      "avatar": "https://api.dicebear.com/7.x/miniavs/svg?seed=1",
+      "activity": {
+        "last_active": "2025-04-08T10:15:00Z",
+        "study_focus": ["Java Programming", "Electric Fields", "Integration"],
+        "availability": ["Evening", "Weekend"]
+      }
+    },
+    {
+      "id": 105000000072454,
+      "name": "Maya Johnson",
+      "courses": ["MATH 141", "CMPSC 221", "SOC 119"],
+      "avatar": "https://api.dicebear.com/7.x/miniavs/svg?seed=2",
+      "activity": {
+        "last_active": "2025-04-07T20:30:00Z",
+        "study_focus": ["Series", "Java Programming", "Race Theory"],
+        "availability": ["Afternoon", "Evening"]
+      }
+    },
+    {
+      "id": 105000000072455,
+      "name": "Raj Patel",
+      "courses": ["CMPSC 360", "CMPSC 221", "PHYS 212"],
+      "avatar": "https://api.dicebear.com/7.x/miniavs/svg?seed=3",
+      "activity": {
+        "last_active": "2025-04-08T14:45:00Z",
+        "study_focus": ["Discrete Math", "Object-Oriented Programming", "Circuits"],
+        "availability": ["Morning", "Evening"]
+      }
+    },
+    {
+      "id": 105000000072456,
+      "name": "Sofia Garcia",
+      "courses": ["PHYS 212", "ENGL 202C", "SOC 119"],
+      "avatar": "https://api.dicebear.com/7.x/miniavs/svg?seed=4",
+      "activity": {
+        "last_active": "2025-04-08T09:20:00Z",
+        "study_focus": ["Electric Fields", "Technical Writing", "Ethnic Relations"],
+        "availability": ["Afternoon", "Weekend"]
+      }
+    },
+    {
+      "id": 105000000072457,
+      "name": "Carlos Rodriguez",
+      "courses": ["CMPSC 221", "MATH 141", "ENGL 202C"],
+      "avatar": "https://api.dicebear.com/7.x/miniavs/svg?seed=5",
+      "activity": {
+        "last_active": "2025-04-07T18:10:00Z",
+        "study_focus": ["Object-Oriented Programming", "Calculus", "Research Paper"],
+        "availability": ["Evening", "Weekend"]
+      }
+    },
+    {
+      "id": 105000000072458,
+      "name": "Emma Wilson",
+      "courses": ["CMPSC 221", "CMPSC 360", "SOC 119"],
+      "avatar": "https://api.dicebear.com/7.x/miniavs/svg?seed=6",
+      "activity": {
+        "last_active": "2025-04-08T11:30:00Z",
+        "study_focus": ["Java Programming", "Discrete Math", "Race Relations"],
+        "availability": ["Morning", "Afternoon"]
+      }
+    }
+  ],
+  "schedules": {
+    "2025-04-08": [
       {
-        "name": "CMPSC 132",
-        "assignments": [
-          {
-            "name": "Recitation #8",
-            "due_at": "2025-03-19T00:00:00Z",
-            "description": "Practice working with binary heaps and ensure you understand insertion and deletion. Attendance credit must be confirmed by TAs.",
-            "submission": {
-              "scores": "9/10"
-            }
-          },
-          {
-            "name": "Recitation #9",
-            "due_at": "2025-03-26T00:00:00Z",
-            "description": "Implement and test a graph traversal in a strongly connected graph using an interactive Python session.",
-            "submission": {
-              "scores": null
-            }
-          },
-          {
-            "name": "Recitation #10",
-            "due_at": "2025-04-02T03:59:00Z",
-            "description": "Focus on recursion and BST operations, such as insertion, searching, and traversal.",
-            "submission": {
-              "scores": null
-            }
-          },
-          {
-            "name": "Recitation #11",
-            "due_at": "2025-04-09T03:59:00Z",
-            "description": "Implement and test three simple sorting algorithms in a Python environment.",
-            "submission": {
-              "scores": null
-            }
-          },
-          {
-            "name": "Recitation #12",
-            "due_at": "2025-04-16T03:59:00Z",
-            "description": "Work with iterators in Python to sequentially access multiple data structures.",
-            "submission": {
-              "scores": null
-            }
-          },
-          {
-            "name": "QUIZ #2",
-            "due_at": "2025-03-28T03:59:00Z",
-            "description": "Covers linked lists, binary trees, and heap fundamentals.",
-            "submission": {
-              "scores": null
-            }
-          },
-          {
-            "name": "QUIZ #3",
-            "due_at": "2025-04-16T03:59:00Z",
-            "description": "All about data structures and algorithms (DSA), including practice with trees, graphs, and sorting.",
-            "submission": {
-              "scores": null
-            }
-          }
-        ],
-        "quizzes": [
-          {
-            "title": "Module 3.1 Checkpoint",
-            "due_at": "2025-02-03T04:59:00Z",
-            "description": "Quick check on module 3.1 topics, including basic data structures.",
-            "submission": {
-              "scores": "10/10"
-            }
-          },
-          {
-            "title": "Module 5 Checkpoint",
-            "due_at": "2025-02-24T04:59:00Z",
-            "description": "Covers key concepts from Module 5: recursion and problem-solving strategies.",
-            "submission": {
-              "scores": "8/10"
-            }
-          },
-          {
-            "title": "Module 6.1 Checkpoint",
-            "due_at": "2025-03-03T04:59:00Z",
-            "description": "Focuses on the first part of Module 6, including advanced array manipulations.",
-            "submission": {
-              "scores": "7/10"
-            }
-          },
-          {
-            "title": "Recitation #8",
-            "due_at": "2025-03-19T00:00:00Z",
-            "description": "Short quiz for binary heaps and verifying understanding of heap operations.",
-            "submission": {
-              "scores": "9/10"
-            }
-          },
-          {
-            "title": "Module 7 Checkpoint",
-            "due_at": "2025-03-23T03:59:00Z",
-            "description": "Assess comprehension of Module 7 content on recursion and sorting methods.",
-            "submission": {
-              "scores": null
-            }
-          },
-          {
-            "title": "Recitation #9",
-            "due_at": "2025-03-26T00:00:00Z",
-            "description": "Quiz on graph traversal techniques practiced in Recitation #9.",
-            "submission": {
-              "scores": null
-            }
-          },
-          {
-            "title": "Module 6.2 Checkpoint",
-            "due_at": "2025-03-31T03:59:00Z",
-            "description": "Second checkpoint for Module 6, focusing on additional data structure operations.",
-            "submission": {
-              "scores": null
-            }
-          },
-          {
-            "title": "Module 8 Checkpoint",
-            "due_at": "2025-03-31T03:59:00Z",
-            "description": "Covers searching and hashing topics introduced in Module 8.",
-            "submission": {
-              "scores": null
-            }
-          },
-          {
-            "title": "Module 9 Checkpoint",
-            "due_at": "2025-03-31T03:59:00Z",
-            "description": "Focuses on graph representations and algorithms from Module 9.",
-            "submission": {
-              "scores": null
-            }
-          },
-          {
-            "title": "[04/13] Quiz 2",
-            "due_at": "2025-04-21T03:59:00Z",
-            "description": "Second major quiz on advanced data structures like heaps, trees, and recursion.",
-            "submission": {
-              "scores": null
-            }
-          },
-          {
-            "title": "[04/13] Quiz 2",
-            "due_at": "2025-04-22T03:59:00Z",
-            "description": "Alternate version or extended time for Quiz 2, covering the same advanced data structures.",
-            "submission": {
-              "scores": null
-            }
-          }
-        ]
+        "title": "CMPSC 221 - Office Hours",
+        "start_time": "14:00",
+        "end_time": "15:00",
+        "type": "meeting",
+        "priority": "medium"
       },
       {
-        "name": "Cmpsc221",
-        "assignments": [
-          {
-            "name": "Test 1 - Chapters 1-10",
-            "due_at": "2025-02-24T04:59:00Z",
-            "description": "Exam covering foundational programming concepts and basic OOP through chapters 1-10.",
-            "submission": {
-              "scores": "80/100"
-            }
-          },
-          {
-            "name": "Programming Assignment 3 Customer Loan Accounts",
-            "due_at": "2025-02-14T04:59:00Z",
-            "description": "Implement a program that manages customer loan accounts using classes, constructors, and data validation.",
-            "submission": {
-              "scores": "18/20"
-            }
-          },
-          {
-            "name": "Programming Assignment 4 Pizza Servings Calculator",
-            "due_at": "2025-02-28T04:59:00Z",
-            "description": "Write a program that calculates pizza servings, practicing modular arithmetic and function usage.",
-            "submission": {
-              "scores": "15/15"
-            }
-          },
-          {
-            "name": "Programming Assignment 5 2D Drawing Application",
-            "due_at": "2025-03-21T03:59:59Z",
-            "description": "Create a GUI-based drawing tool, emphasizing event handling and class design for shapes.",
-            "submission": {
-              "scores": null
-            }
-          },
-          {
-            "name": "Programming Assignment 6 - Functional Programming",
-            "due_at": "2025-04-04T03:59:59Z",
-            "description": "Learn and apply functional programming concepts, including higher-order functions and lambdas.",
-            "submission": {
-              "scores": null
-            }
-          },
-          {
-            "name": "Test 2 - Chapters 12, 13, 16",
-            "due_at": "2025-03-31T03:59:00Z",
-            "description": "Assessment of deeper OOP concepts, exception handling, and file I/O from chapters 12, 13, 16.",
-            "submission": {
-              "scores": null
-            }
-          },
-          {
-            "name": "Test 3 - Chapters 11, 24",
-            "due_at": "2025-05-05T03:59:00Z",
-            "description": "Final exam covering data structures like lists, stacks, and generics from chapters 11 and 24.",
-            "submission": {
-              "scores": null
-            }
-          }
-        ],
-        "quizzes": [
-          {
-            "title": "Test 1 - Chapters 1-10",
-            "due_at": "2025-02-24T04:59:00Z",
-            "description": "In-class or online quiz version of the Test 1 material on core Java concepts.",
-            "submission": {
-              "scores": "80/100"
-            }
-          },
-          {
-            "title": "Test 2 - Chapters 12, 13, 16",
-            "due_at": "2025-03-31T03:59:00Z",
-            "description": "Quiz checking proficiency with advanced OOP, exceptions, and file I/O features.",
-            "submission": {
-              "scores": null
-            }
-          },
-          {
-            "title": "Test 3 - Chapters 11, 24",
-            "due_at": "2025-05-05T03:59:00Z",
-            "description": "Quiz on data structures, focusing on lists, stacks, and generic programming.",
-            "submission": {
-              "scores": null
-            }
-          }
-        ]
+        "title": "MATH 141 - Review",
+        "start_time": "16:00",
+        "end_time": "18:00",
+        "type": "study",
+        "priority": "high"
+      }
+    ],
+    "2025-04-09": [
+      {
+        "title": "SOC 119 - Discussion Post",
+        "start_time": "10:00",
+        "end_time": "11:00",
+        "type": "study",
+        "priority": "low"
       },
       {
-        "name": "CMPSC 360",
-        "assignments": [
-          {
-            "name": "HW7",
-            "description": "Practice problems on counting techniques and advanced set theory.",
-            "due_at": "2025-03-20T04:59:00Z",
-            "submission": {
-              "scores": "15/15"
-            }
-          },
-          {
-            "name": "HW8",
-            "due_at": "2025-03-25T03:59:59Z",
-            "description": "Exercises on combinatorics and proof strategies involving mathematical induction.",
-            "submission": {
-              "scores": null
-            }
-          },
-          {
-            "name": "Quiz 1: Logic and sets. Graded.",
-            "due_at": "2025-02-17T04:59:00Z",
-            "description": "Covers logical equivalences, set operations, and basic proofs.",
-            "submission": {
-              "scores": "8/10"
-            }
-          },
-          {
-            "name": "Midterm exam 1",
-            "due_at": "2025-02-28T13:00:00Z",
-            "description": "Exam on logic, sets, functions, and the first half of discrete math fundamentals.",
-            "submission": {
-              "scores": "45/50"
-            }
-          },
-          {
-            "name": "Virtual assignment",
-            "due_at": "2025-04-15T04:59:00Z",
-            "description": "Online exercise exploring additional discrete math concepts and problem-solving techniques.",
-            "submission": {
-              "scores": null
-            }
-          },
-          {
-            "name": "Midterm exam 2",
-            "due_at": "2025-04-03T13:00:00Z",
-            "description": "Second midterm covering number theory, combinatorics, and more advanced discrete math topics.",
-            "submission": {
-              "scores": null
-            }
-          }
-        ],
-        "quizzes": [
-          {
-            "title": "Quiz 1: Logic and sets. Training.",
-            "due_at": "2025-02-10T04:59:00Z",
-            "description": "Practice quiz reviewing logic simplifications and basic set operations.",
-            "submission": {
-              "scores": "9/10"
-            }
-          },
-          {
-            "title": "Quiz 3: Logic and sets. Graded.",
-            "due_at": "2025-03-29T04:59:00Z",
-            "description": "Comprehensive graded quiz on advanced logical equivalences and set theory proofs.",
-            "submission": {
-              "scores": null
-            }
-          }
-        ]
+        "title": "CMPSC 360 - Study Group",
+        "start_time": "17:00",
+        "end_time": "19:00",
+        "type": "group",
+        "priority": "medium"
+      }
+    ],
+    "2025-04-10": [
+      {
+        "title": "MATH 141 - Homework 12",
+        "start_time": "13:00",
+        "end_time": "16:00",
+        "type": "study",
+        "priority": "high"
       },
       {
-        "name": "Geog 30N",
-        "assignments": [
-          {
-            "name": "Written Assignment 2: Carbon Footprints and Individual vs Collective Action",
-            "due_at": "2025-03-02T04:59:59Z",
-            "submission": {
-              "description": "Analyze personal carbon footprints and compare the impact of individual versus collective environmental actions.",
-              "scores": "18/20"
-            }
-          },
-          {
-            "name": "Written Assignment 3: Development and Agriculture",
-            "due_at": "2025-03-24T03:59:00Z",
-            "description": "Discuss the role of agriculture in global development and sustainability challenges.",
-            "submission": {
-              "scores": null
-            }
-          },
-          {
-            "name": "Written Assignment 4: Sustainable Cities",
-            "due_at": "2025-04-07T03:59:00Z",
-            "description": "Explore strategies for making urban areas more sustainable and resilient.",
-            "submission": {
-              "scores": null
-            }
-          },
-          {
-            "name": "Written Assignment 5: Vulnerability Reduction",
-            "due_at": "2025-04-21T03:59:00Z",
-            "description": "Assess methods to reduce vulnerability to environmental hazards and climate change.",
-            "submission": {
-              "scores": null
-            }
-          },
-          {
-            "name": "Written Assignment 6: Biodiversity",
-            "due_at": "2025-04-28T03:59:00Z",
-            "description": "Examine biodiversity hotspots and the factors threatening global species diversity.",
-            "submission": {
-              "scores": null
-            }
-          },
-          {
-            "name": "Quiz 2 ",
-            "due_at": "2025-04-09T03:59:00Z",
-            "description": "Covers environmental governance, global policy efforts, and sustainability frameworks.",
-            "submission": {
-              "scores": null
-            }
-          },
-          {
-            "name": "Quiz 3 ",
-            "due_at": "2025-05-05T03:59:00Z",
-            "description": "Final quiz focusing on climate action, development strategies, and global sustainability case studies.",
-            "submission": {
-              "scores": null
-            }
-          }
-        ]
+        "title": "PHYS 212 - Exam Prep",
+        "start_time": "19:00",
+        "end_time": "21:00",
+        "type": "study",
+        "priority": "high"
+      }
+    ],
+    "2025-04-11": [
+      {
+        "title": "PHYS 212 - Exam 2",
+        "start_time": "14:30",
+        "end_time": "16:00",
+        "type": "exam",
+        "priority": "high"
       },
       {
-        "name": "MATH 230",
-        "assignments": [
-          {
-            "name": "15.3 Homework",
-            "due_at": "2025-03-08T04:59:00Z",
-            "submission": {
-              "description": "Focus on triple integrals in rectangular coordinates and applications in 3D volumes.",
-              "scores": "12/15"
-            }
-          },
-          {
-            "name": "15.4 Homework",
-            "due_at": "2025-03-22T03:59:00Z",
-            "submission": {
-              "description": "Practice changing the order of integration and using cylindrical coordinates.",
-              "scores": null
-            }
-          },
-          {
-            "name": "15.6 Homework",
-            "due_at": "2025-03-22T03:59:00Z",
-            "submission": {
-              "description": "Covers triple integrals in spherical coordinates and their geometric interpretations.",
-              "scores": null
-            }
-          },
-          {
-            "name": "16.1 Homework",
-            "due_at": "2025-03-29T03:59:00Z",
-            "submission": {
-              "description": "Introduction to vector fields and line integrals, including parametrizing curves.",
-              "scores": null
-            }
-          },
-          {
-            "name": "16.2 Homework",
-            "due_at": "2025-04-05T03:59:00Z",
-            "submission": {
-              "description": "Focus on the Fundamental Theorem of Line Integrals and conservative vector fields.",
-              "scores": null
-            }
-          },
-          {
-            "name": "16.4 Homework",
-            "due_at": "2025-04-12T03:59:00Z",
-            "submission": {
-              "description": "Covers Green’s Theorem and applying line integrals in the plane to compute area.",
-              "scores": null
-            }
-          },
-          {
-            "name": "Written Homework 5",
-            "due_at": "2025-02-24T04:59:59Z",
-            "submission": {
-              "description": "Written problems on partial derivatives and applications of multivariable functions.",
-              "scores": "20/25"
-            }
-          },
-          {
-            "name": "Written Homework 8",
-            "due_at": "2025-03-24T03:59:59Z",
-            "submission": {
-              "description": "Exercises focusing on multiple integrals and setting up correct bounds in different coordinate systems.",
-              "scores": null
-            }
-          },
-          {
-            "name": "Written Homework 9",
-            "due_at": "2025-03-31T03:59:59Z",
-            "submission": {
-              "description": "Short-answer questions on vector fields, line integrals, and fundamental theorems of calculus in higher dimensions.",
-              "scores": null
-            }
-          },
-          {
-            "name": "Quiz 2",
-            "due_at": "2025-03-20T03:59:59Z",
-            "description": "Covers integration techniques in cylindrical and spherical coordinates along with related applications.",
-            "submission": {
-              "scores": "28/30"
-            }
-          },
-          {
-            "name": "Quiz 3",
-            "due_at": "2025-04-12T03:59:00Z",
-            "description": "Tests knowledge of line integrals, vector fields, and Green’s Theorem.",
-            "submission": {
-              "scores": null
-            }
-          }
-        ]
+        "title": "CMPSC 221 - Programming Assignment 5",
+        "start_time": "18:00",
+        "end_time": "22:00",
+        "type": "study",
+        "priority": "high"
+      }
+    ],
+    "2025-04-12": [
+      {
+        "title": "CMPSC 360 - HW8",
+        "start_time": "10:00",
+        "end_time": "13:00",
+        "type": "study",
+        "priority": "medium"
       },
       {
-        "name": "METEO 1N",
-        "assignments": [
-          {
-            "name": "Lesson 1 Quiz",
-            "due_at": "2025-03-26T03:59:00Z",
-            "submission": {
-              "description": "Covers basic weather concepts and introductory atmospheric science principles.",
-              "scores": null
-            }
-          },
-          {
-            "name": "Lesson 2 Quiz",
-            "due_at": "2025-03-29T03:59:00Z",
-            "submission": {
-              "description": "Reviews storm systems, wind patterns, and temperature variability.",
-              "scores": null
-            }
-          },
-          {
-            "name": "Knowledge Checkpoint 1: \"Something Old and Something New\"",
-            "due_at": "2025-04-05T03:59:00Z",
-            "submission": {
-              "description": "Reflect on historical vs modern meteorological methods, and the evolution of weather prediction.",
-              "scores": null
-            }
-          },
-          {
-            "name": "Knowledge Checkpoint 2: \"Tornado Tales\"",
-            "due_at": "2025-04-12T03:59:00Z",
-            "submission": {
-              "description": "Investigate tornado formation, safety procedures, and real-world case studies.",
-              "scores": null
-            }
-          },
-          {
-            "name": "\"Assessing the Damages\" Survey (Lesson 3)",
-            "due_at": "2025-03-29T03:59:00Z",
-            "submission": {
-              "description": "Survey analyzing the aftermath of severe weather events and damage mitigation.",
-              "scores": null
-            }
-          },
-          {
-            "name": "\"Assessing the Damages\" Survey (Lesson 2)",
-            "due_at": "2025-03-26T03:59:00Z",
-            "submission": {
-              "description": "Collect and discuss data on damage patterns related to strong wind events.",
-              "scores": null
-            }
-          }
-        ]
+        "title": "ENGL 202C - Research",
+        "start_time": "15:00",
+        "end_time": "16:00",
+        "type": "study",
+        "priority": "medium"
+      }
+    ],
+    "2025-04-13": [
+      {
+        "title": "Study Break",
+        "start_time": "10:00",
+        "end_time": "12:00",
+        "type": "break",
+        "priority": "low"
+      },
+      {
+        "title": "Final Exam Preparation",
+        "start_time": "15:00",
+        "end_time": "18:00",
+        "type": "study",
+        "priority": "medium"
+      }
+    ],
+    "2025-04-14": [
+      {
+        "title": "PHYS 212 - Lab Report 6",
+        "start_time": "13:00",
+        "end_time": "16:00",
+        "type": "study",
+        "priority": "medium"
+      },
+      {
+        "title": "ENGL 202C - Outline Draft",
+        "start_time": "18:00",
+        "end_time": "20:00",
+        "type": "study",
+        "priority": "medium"
       }
     ]
-  }
+  },
+  "timeEstimationHistory": [
+    {
+      "task_id": "CMPSC221-SP25-A1",
+      "task_name": "Test 1 - Chapters 1-10",
+      "estimated_time": 5,
+      "actual_time": 2,
+      "difficulty": 8,
+      "focus": 9,
+      "date": "2025-02-24"
+    },
+    {
+      "task_id": "MATH141-SP25-A7",
+      "task_name": "Test 2",
+      "estimated_time": 6,
+      "actual_time": 1.5,
+      "difficulty": 9,
+      "focus": 10,
+      "date": "2025-03-20"
+    },
+    {
+      "task_id": "CMPSC221-SP25-A2",
+      "task_name": "Programming Assignment 3",
+      "estimated_time": 5,
+      "actual_time": 6,
+      "difficulty": 7,
+      "focus": 8,
+      "date": "2025-02-13"
+    },
+    {
+      "task_id": "CMPSC360-SP25-A4",
+      "task_name": "Midterm exam 1",
+      "estimated_time": 5,
+      "actual_time": 2,
+      "difficulty": 9,
+      "focus": 10,
+      "date": "2025-02-28"
+    },
+    {
+      "task_id": "SOC119-SP25-A3",
+      "task_name": "Midterm Exam",
+      "estimated_time": 5,
+      "actual_time": 1.5,
+      "difficulty": 7,
+      "focus": 9,
+      "date": "2025-03-15"
+    },
+    {
+      "task_id": "PHYS212-SP25-A1",
+      "task_name": "Homework 7: Electric Fields",
+      "estimated_time": 3,
+      "actual_time": 3,
+      "difficulty": 8,
+      "focus": 9,
+      "date": "2025-03-04"
+    }
+  ]
+}
