@@ -1,0 +1,57 @@
+# Root level gitignore for EduAI project
+
+# Environment files (CRITICAL - Contains API keys)
+.env
+.env.*
+!.env.example
+
+# Documentation with potentially sensitive info
+*.docx
+*.doc
+*.pdf
+**/private/
+**/confidential/
+
+# IDE and Editor files
+.vscode/settings.json
+.vscode/launch.json
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Personal notes and private files
+notes/
+personal/
+private/
+TODO.private
+NOTES.private
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Temporary files
+*.tmp
+*.temp
+
+# Allow sample data but protect real user data
+# The my_canvas_data.json in backend is sample data and can be public
+# If you add real Canvas data, name it differently and add it here:
+# real_canvas_data.json
+# user_data.json
+# actual_*.json
